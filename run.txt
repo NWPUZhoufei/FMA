@@ -1,0 +1,193 @@
+
+一、extreme setting
+
+EuroSAT--5shot：
+CUDA_VISIBLE_DEVICES=0  nohup python main_extreme_setting.py \
+--pretrained_weights ./dino/dino_vitbase16_pretrain.pth \
+--data_root ./data/EuroSAT \
+--train_txt_path ./data/extreme_setting_label/EuroSAT_label/EuroSAT_train_5shot.txt  \
+--val_txt_path ./data/extreme_setting_label/EuroSAT_label/EuroSAT_val.txt  \
+--test_txt_path ./data/extreme_setting_label/EuroSAT_label/EuroSAT_test.txt \
+--num_class 10 \
+--batch_size  32 \
+--epoch 500 \
+--mask_ratio 0.5 \
+--lambda_mae_loss 1.0 \
+--lambda_ss_loss 1.0 \
+--save_dir EuroSAT_5shot \
+--model_path EuroSAT_5shot/best.tar \
+>record.EuroSAT_5shot.log 2>&1 & 
+
+
+EuroSAT--1shot：
+CUDA_VISIBLE_DEVICES=0  nohup python main_extreme_setting.py \
+--pretrained_weights ./dino/dino_vitbase16_pretrain.pth \
+--data_root ./data/EuroSAT \
+--train_txt_path ./data/extreme_setting_label/EuroSAT_label/EuroSAT_train_1shot.txt  \
+--val_txt_path ./data/extreme_setting_label/EuroSAT_label/EuroSAT_val.txt  \
+--test_txt_path ./data/extreme_setting_label/EuroSAT_label/EuroSAT_test.txt \
+--num_class 10 \
+--batch_size  32 \
+--epoch 500 \
+--mask_ratio 0.5 \
+--lambda_mae_loss 0.05 \
+--lambda_ss_loss 0.05 \
+--save_dir EuroSAT_1shot \
+--model_path EuroSAT_1shot/best.tar \
+>record.EuroSAT_1shot.log 2>&1 & 
+
+
+
+ISIC--5shot：
+CUDA_VISIBLE_DEVICES=0  nohup python main_extreme_setting.py \
+--pretrained_weights ./dino/dino_vitbase16_pretrain.pth \
+--data_root ./data/ISIC \
+--train_txt_path ./data/extreme_setting_label/ISIC_label/ISIC_train_5shot.txt  \
+--val_txt_path ./data/extreme_setting_label/ISIC_label/ISIC_val.txt  \
+--test_txt_path ./data/extreme_setting_label/ISIC_label/ISIC_test.txt \
+--num_class 7 \
+--batch_size  32 \
+--epoch 500 \
+--mask_ratio 0.5 \
+--lambda_mae_loss 5.0 \
+--lambda_ss_loss 1.0 \
+--save_dir ISIC_5shot \
+--model_path ISIC_5shot/best.tar \
+>record.ISIC_5shot.log 2>&1 & 
+
+
+ISIC--1shot：
+CUDA_VISIBLE_DEVICES=0  nohup python main_extreme_setting.py \
+--pretrained_weights ./dino/dino_vitbase16_pretrain.pth \
+--data_root ./data/ISIC \
+--train_txt_path ./data/extreme_setting_label/ISIC_label/ISIC_train_1shot.txt  \
+--val_txt_path ./data/extreme_setting_label/ISIC_label/ISIC_val.txt  \
+--test_txt_path ./data/extreme_setting_label/ISIC_label/ISIC_test.txt \
+--num_class 7 \
+--batch_size  32 \
+--epoch 500 \
+--mask_ratio 0.5 \
+--lambda_mae_loss 1.0 \
+--lambda_ss_loss 100.0 \
+--save_dir ISIC_1shot \
+--model_path ISIC_1shot/best.tar \
+>record.ISIC_1shot.log 2>&1 & 
+
+
+Chest7--5shot：
+CUDA_VISIBLE_DEVICES=0  nohup python main_extreme_setting.py \
+--pretrained_weights ./dino/dino_vitbase16_pretrain.pth \
+--data_root ./data/Chest7 \
+--train_txt_path ./data/extreme_setting_label/Chest7_label/Chest7_train_5shot.txt  \
+--val_txt_path ./data/extreme_setting_label/Chest7_label/Chest7_val.txt  \
+--test_txt_path ./data/extreme_setting_label/Chest7_label/Chest7_test.txt \
+--num_class 7 \
+--batch_size  32 \
+--epoch 500 \
+--mask_ratio 0.5 \
+--lambda_mae_loss 1.0 \
+--lambda_ss_loss 1.5 \
+--save_dir Chest7_5shot \
+--model_path Chest7_5shot/best.tar \
+>record.Chest7_5shot.log 2>&1 & 
+
+
+Chest7--1shot：
+CUDA_VISIBLE_DEVICES=0  nohup python main_extreme_setting.py \
+--pretrained_weights ./dino/dino_vitbase16_pretrain.pth \
+--data_root ./data/Chest7 \
+--train_txt_path ./data/extreme_setting_label/Chest7_label/Chest7_train_1shot.txt  \
+--val_txt_path ./data/extreme_setting_label/Chest7_label/Chest7_val.txt  \
+--test_txt_path ./data/extreme_setting_label/Chest7_label/Chest7_test.txt \
+--num_class 7 \
+--batch_size  32 \
+--epoch 500 \
+--mask_ratio 0.5 \
+--lambda_mae_loss 50.0 \
+--lambda_ss_loss 50.0 \
+--save_dir Chest7_1shot \
+--model_path Chest7_1shot/best.tar \
+>record.Chest7_1shot.log 2>&1 & 
+
+
+
+CropDisease--5shot：
+CUDA_VISIBLE_DEVICES=0  nohup python main_extreme_setting.py \
+--pretrained_weights ./dino/dino_vitbase16_pretrain.pth \
+--data_root ./data/CropDisease \
+--train_txt_path ./data/extreme_setting_label/CropDisease_label/CropDisease_train_5shot.txt  \
+--val_txt_path ./data/extreme_setting_label/CropDisease_label/CropDisease_val.txt  \
+--test_txt_path ./data/extreme_setting_label/CropDisease_label/CropDisease_test.txt \
+--num_class 38 \
+--batch_size  32 \
+--epoch 500 \
+--mask_ratio 0.5 \
+--lambda_mae_loss 1.0 \
+--lambda_ss_loss 2.0 \
+--save_dir CropDisease_5shot \
+--model_path CropDisease_5shot/best.tar \
+>record.CropDisease_5shot.log 2>&1 & 
+
+
+
+CropDisease--1shot：
+CUDA_VISIBLE_DEVICES=0  nohup python main_extreme_setting.py \
+--pretrained_weights ./dino/dino_vitbase16_pretrain.pth \
+--data_root ./data/CropDisease \
+--train_txt_path ./data/extreme_setting_label/CropDisease_label/CropDisease_train_1shot.txt  \
+--val_txt_path ./data/extreme_setting_label/CropDisease_label/CropDisease_val.txt  \
+--test_txt_path ./data/extreme_setting_label/CropDisease_label/CropDisease_test.txt \
+--num_class 38 \
+--batch_size  32 \
+--epoch 500 \
+--mask_ratio 0.5 \
+--lambda_mae_loss 1.0 \
+--lambda_ss_loss 1.0 \
+--save_dir CropDisease_1shot \
+--model_path CropDisease_1shot/best.tar \
+>record.CropDisease_1shot.log 2>&1 & 
+
+
+
+二、traditional setting
+
+1shot：
+
+CUDA_VISIBLE_DEVICES=0  nohup python main_traditional_setting.py --lr 0.00000001  --tr_N  7 --tr_K  10 --n_support 1 --seed 1111  --model_path ./dino/dino_deitsmall8_pretrain.pth  --feature_size 384 --current_data_path ./data/EuroSAT  --current_class 10 --test_n_eposide 600  >record_t_1.log 2>&1 &
+
+CUDA_VISIBLE_DEVICES=0  nohup python main_traditional_setting.py --lr 0.00000001  --tr_N  7 --tr_K  10 --n_support 1 --seed 1111  --model_path ./dino/dino_deitsmall8_pretrain.pth  --feature_size 384 --current_data_path ./data/CropDisease --current_class 38 --test_n_eposide 600 >record_t_2.log 2>&1 &
+
+CUDA_VISIBLE_DEVICES=0  nohup python main_traditional_setting.py --lr 0.00000001  --tr_N  7 --tr_K  10 --n_support 1 --seed 1111  --model_path ./dino/dino_deitsmall8_pretrain.pth  --feature_size 384 --current_data_path ./data/ISIC --current_class 7 --test_n_eposide 600 >record_t_3.log 2>&1 &
+
+CUDA_VISIBLE_DEVICES=0  nohup python main_traditional_setting.py --lr 0.00000001  --tr_N  7 --tr_K  10 --n_support 1 --seed 1111  --model_path ./dino/dino_deitsmall8_pretrain.pth  --feature_size 384 --current_data_path ./data/CUB/novel  --current_class 50 --test_n_eposide 600 >record_t_4.log 2>&1 &
+
+CUDA_VISIBLE_DEVICES=0  nohup python main_traditional_setting.py --lr 0.00000001  --tr_N  7 --tr_K  10 --n_support 1 --seed 1111  --model_path ./dino/dino_deitsmall8_pretrain.pth  --feature_size 384 --current_data_path ./data/cars/novel  --current_class 49 --test_n_eposide 600 >record_t_5.log 2>&1 &
+
+CUDA_VISIBLE_DEVICES=0  nohup python main_traditional_setting.py --lr 0.00000001  --tr_N  7 --tr_K  10 --n_support 1 --seed 1111  --model_path ./dino/dino_deitsmall8_pretrain.pth  --feature_size 384 --current_data_path ./data/Places/novel  --current_class 91 --test_n_eposide 600 >record_t_6.log 2>&1 &
+
+CUDA_VISIBLE_DEVICES=0  nohup python main_traditional_setting.py --lr 0.00000001  --tr_N  7 --tr_K  10 --n_support 1 --seed 1111  --model_path ./dino/dino_deitsmall8_pretrain.pth  --feature_size 384 --current_data_path ./data/Plantae/novel  --current_class 50 --test_n_eposide 600 >record_t_7.log 2>&1 &
+
+CUDA_VISIBLE_DEVICES=0  nohup python main_traditional_setting.py --lr 0.00000001  --tr_N  7 --tr_K  10 --n_support 1 --seed 1111  --model_path ./dino/dino_deitsmall8_pretrain.pth  --feature_size 384 --current_data_path ./data/Chest7 --current_class 7 --test_n_eposide 600 >record_t_8.log 2>&1 &
+
+
+
+5shot：
+
+CUDA_VISIBLE_DEVICES=0  nohup python main_traditional_setting.py --lr 0.00000001  --tr_N  7 --tr_K  10 --n_support 5 --seed 1111  --model_path ./dino/dino_deitsmall8_pretrain.pth  --feature_size 384 --current_data_path ./data/EuroSAT  --current_class 10 --test_n_eposide 600  >record_tt_1.log 2>&1 &
+
+CUDA_VISIBLE_DEVICES=0  nohup python main_traditional_setting.py --lr 0.00000001  --tr_N  7 --tr_K  10 --n_support 5 --seed 1111  --model_path ./dino/dino_deitsmall8_pretrain.pth  --feature_size 384 --current_data_path ./data/CropDisease --current_class 38 --test_n_eposide 600 >record_tt_2.log 2>&1 &
+
+CUDA_VISIBLE_DEVICES=0  nohup python main_traditional_setting.py --lr 0.00000001  --tr_N  7 --tr_K  10 --n_support 5 --seed 1111  --model_path ./dino/dino_deitsmall8_pretrain.pth  --feature_size 384 --current_data_path ./data/ISIC --current_class 7 --test_n_eposide 600 >record_tt_3.log 2>&1 &
+
+CUDA_VISIBLE_DEVICES=0  nohup python main_traditional_setting.py --lr 0.00000001  --tr_N  7 --tr_K  10 --n_support 5 --seed 1111  --model_path ./dino/dino_deitsmall8_pretrain.pth  --feature_size 384 --current_data_path ./data/CUB/novel  --current_class 50 --test_n_eposide 600 >record_tt_4.log 2>&1 &
+
+CUDA_VISIBLE_DEVICES=0  nohup python main_traditional_setting.py --lr 0.00000001  --tr_N  7 --tr_K  10 --n_support 5 --seed 1111  --model_path ./dino/dino_deitsmall8_pretrain.pth  --feature_size 384 --current_data_path ./data/cars/novel  --current_class 49 --test_n_eposide 600 >record_tt_5.log 2>&1 &
+
+CUDA_VISIBLE_DEVICES=0  nohup python main_traditional_setting.py --lr 0.00000001  --tr_N  7 --tr_K  10 --n_support 5 --seed 1111  --model_path ./dino/dino_deitsmall8_pretrain.pth  --feature_size 384 --current_data_path ./data/Places/novel  --current_class 91 --test_n_eposide 600 >record_tt_6.log 2>&1 &
+
+CUDA_VISIBLE_DEVICES=0  nohup python main_traditional_setting.py --lr 0.00000001  --tr_N  7 --tr_K  10 --n_support 5 --seed 1111  --model_path ./dino/dino_deitsmall8_pretrain.pth  --feature_size 384 --current_data_path ./data/Plantae/novel  --current_class 50 --test_n_eposide 600 >record_tt_7.log 2>&1 &
+
+CUDA_VISIBLE_DEVICES=0  nohup python main_traditional_setting.py --lr 0.00000001  --tr_N  7 --tr_K  10 --n_support 5 --seed 1111  --model_path ./dino/dino_deitsmall8_pretrain.pth  --feature_size 384 --current_data_path ./data/Chest7 --current_class 7 --test_n_eposide 600 >record_tt_8.log 2>&1 &
+
+
+

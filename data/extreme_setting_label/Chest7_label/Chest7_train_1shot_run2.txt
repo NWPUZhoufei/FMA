@@ -1,0 +1,7 @@
+Atelectasis/00003663_000.png 0
+Infiltration/00001558_002.png 1
+Effusion/00027657_008.png 2
+Mass/00026330_002.png 3
+Cardiomegaly/00029246_000.png 4
+Nodule/00022877_013.png 5
+Pneumothorax/00003072_029.png 6

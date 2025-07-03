@@ -1,0 +1,10 @@
+Residential/Residential_2271.jpg 0
+Highway/Highway_879.jpg 1
+HerbaceousVegetation/HerbaceousVegetation_1599.jpg 2
+Forest/Forest_958.jpg 3
+PermanentCrop/PermanentCrop_1041.jpg 4
+AnnualCrop/AnnualCrop_2684.jpg 5
+Pasture/Pasture_825.jpg 6
+SeaLake/SeaLake_1654.jpg 7
+River/River_1493.jpg 8
+Industrial/Industrial_1715.jpg 9
